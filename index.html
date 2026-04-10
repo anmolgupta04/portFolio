@@ -3,143 +3,604 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Anmol Gupta · refined DevOps portfolio</title>
-  
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-  <!-- Google Fonts: Inter (base) + JetBrains Mono for accents -->
+  <title>Anmol Gupta | DevOps Engineer</title>
+  <meta
+    name="description"
+    content="Fresher DevOps Engineer portfolio - Docker, CI/CD, Linux, AWS, Python"
+  >
+  <meta name="theme-color" content="#0D1117">
+  <meta property="og:title" content="Anmol Gupta | DevOps Engineer">
+  <meta
+    property="og:description"
+    content="Fresher DevOps Engineer portfolio - Docker, CI/CD, Linux, AWS, Python"
+  >
+  <meta property="og:type" content="website">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Inter:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet"
+  >
+  <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+  >
   <link rel="stylesheet" href="style.css">
-  
-
 </head>
 <body>
-  <div class="theme-toggle" id="themeToggle">
-    <i class="fas fa-moon" id="themeIcon"></i>
-  </div>
+  <a class="skip-link" href="#about">Skip to content</a>
 
-  <div class="container">
-    <!-- header with bigger fonts -->
-    <div class="header-top">
-      <div class="name-title">
-        <h1>Anmol Gupta <span style="font-size: 2.2rem;">🚀</span></h1>
-        <span class="badge"><i class="fas fa-cloud"></i> <span id="typed-role"></span></span>
+  <header class="site-header" id="navbar">
+    <div class="container nav-shell">
+      <a class="brand" href="#home" aria-label="Anmol Gupta home">
+        <span class="brand-mark">AG</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="navToggle"
+        type="button"
+        aria-label="Toggle navigation"
+        aria-controls="navMenu"
+        aria-expanded="false"
+      >
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#projects">Projects</a>
+        <a href="#education">Education</a>
+        <a href="#certifications">Certifications</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="home">
+    <section class="hero section-shell">
+      <canvas id="heroCanvas" class="hero-canvas" aria-hidden="true"></canvas>
+      <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-one" aria-hidden="true"></div>
+      <div class="hero-glow hero-glow-two" aria-hidden="true"></div>
+
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <p class="eyebrow reveal">
+            <i class="fa-solid fa-terminal"></i>
+            <span>DevOps / Automation / Observability</span>
+          </p>
+
+          <h1 class="hero-title reveal">Hi, I'm Anmol Gupta</h1>
+
+          <div class="hero-type reveal" aria-live="polite">
+            <span class="prompt">&gt;</span>
+            <span class="typewriter" id="typewriter"></span>
+            <span class="cursor" aria-hidden="true"></span>
+          </div>
+
+          <p class="hero-text reveal">
+            Building scalable pipelines &amp; reliable systems.
+          </p>
+
+          <div class="hero-actions reveal">
+            <a class="btn btn-primary" href="#projects">
+              <i class="fa-solid fa-diagram-project"></i>
+              <span>View Projects</span>
+            </a>
+            <a class="btn btn-secondary" href="resume.pdf" download>
+              <i class="fa-solid fa-file-arrow-down"></i>
+              <span>Download Resume</span>
+            </a>
+          </div>
+
+          <ul class="hero-metrics reveal" aria-label="Quick highlights">
+            <li><span>9.5 CGPA</span></li>
+            <li><span>CI/CD Focused</span></li>
+            <li><span>Linux First</span></li>
+          </ul>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="terminal-card">
+            <div class="terminal-top">
+              <div class="terminal-dots" aria-hidden="true">
+                <span></span>
+                <span></span>
+                <span></span>
+              </div>
+              <p>terminal://anmol/devops-portfolio</p>
+            </div>
+
+            <div class="terminal-body">
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span>cat profile.txt</span>
+              </div>
+              <p class="terminal-output">Fresher DevOps Engineer | MCA Student | Pipeline Builder</p>
+
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span>stack --list</span>
+              </div>
+              <p class="terminal-output">
+                Docker / GitHub Actions / Kubernetes / Terraform / Linux
+              </p>
+
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span>metrics --summary</span>
+              </div>
+
+              <div class="terminal-stats">
+                <article>
+                  <strong>05+</strong>
+                  <span>Projects Built</span>
+                </article>
+                <article>
+                  <strong>04</strong>
+                  <span>Certifications</span>
+                </article>
+                <article>
+                  <strong>03</strong>
+                  <span>Monitored Services</span>
+                </article>
+              </div>
+
+              <div class="terminal-line">
+                <span class="prompt">$</span>
+                <span>status --now</span>
+              </div>
+              <p class="terminal-output success">Open to DevOps, SRE, and platform engineering opportunities.</p>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="contact-row">
-        <div class="contact-item"><i class="fas fa-map-marker-alt"></i> Hyderabad, India</div>
-        <div class="contact-item"><i class="fas fa-phone-alt"></i> 9770401857</div>
-        <div class="contact-item"><i class="fas fa-envelope"></i> <a href="mailto:anmolgupta0415@gmail.com">anmolgupta0415@gmail.com</a></div>
-        <div class="contact-item"><i class="fab fa-linkedin"></i> <a href="https://linkedin.com/in/anmol-gupta">linkedin.com/in/anmol-gupta</a></div>
-        <div class="contact-item"><i class="fab fa-github"></i> <a href="https://github.com/anmolgupta04">github.com/anmolgupta04</a></div>
+    </section>
+
+    <section class="section-shell section" id="about">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">About</p>
+          <h2>About</h2>
+          <p>
+            Results-driven MCA student with CGPA 9.5/10, passionate about DevOps,
+            automation, and building reliable deployment pipelines. Hands-on experience
+            with Docker, GitHub Actions, Prometheus, Grafana, and Linux. Always learning,
+            always building.
+          </p>
+        </div>
+
+        <div class="stats-grid">
+          <article class="stat-card reveal">
+            <div class="stat-icon">
+              <i class="fa-solid fa-graduation-cap"></i>
+            </div>
+            <strong>9.5 / 10</strong>
+            <span>CGPA</span>
+          </article>
+
+          <article class="stat-card reveal">
+            <div class="stat-icon">
+              <i class="fa-solid fa-laptop-code"></i>
+            </div>
+            <strong>5+</strong>
+            <span>Projects Built</span>
+          </article>
+
+          <article class="stat-card reveal">
+            <div class="stat-icon">
+              <i class="fa-solid fa-certificate"></i>
+            </div>
+            <strong>4</strong>
+            <span>Certifications</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section" id="skills">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Technical Skills</p>
+          <h2>Technical Skills</h2>
+          <p>
+            A fresher mindset with production-oriented habits: automate early, monitor deeply,
+            and keep the delivery path reliable.
+          </p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <h3><i class="fa-solid fa-box-open"></i> Container &amp; Orchestration</h3>
+            <div class="badge-group">
+              <span>Docker</span>
+              <span>Docker Compose</span>
+              <span>Kubernetes</span>
+              <span>Helm</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fa-solid fa-gears"></i> CI/CD &amp; Automation</h3>
+            <div class="badge-group">
+              <span>GitHub Actions</span>
+              <span>Jenkins</span>
+              <span>Shell Scripting</span>
+              <span>Bash</span>
+              <span>YAML</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fa-solid fa-cloud"></i> Cloud &amp; IaC</h3>
+            <div class="badge-group">
+              <span>AWS EC2</span>
+              <span>AWS S3</span>
+              <span>AWS IAM</span>
+              <span>AWS VPC</span>
+              <span>CloudWatch</span>
+              <span>Terraform</span>
+              <span>Ansible</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fa-solid fa-chart-column"></i> Observability</h3>
+            <div class="badge-group">
+              <span>Prometheus</span>
+              <span>Grafana</span>
+              <span>OpenTelemetry</span>
+              <span>structlog</span>
+              <span>NGINX</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fa-solid fa-code"></i> Programming</h3>
+            <div class="badge-group">
+              <span>Python</span>
+              <span>Bash</span>
+              <span>Django</span>
+              <span>Flask</span>
+              <span>REST APIs</span>
+              <span>SQL</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fa-solid fa-robot"></i> AI Developer Tools</h3>
+            <div class="badge-group">
+              <span>ChatGPT</span>
+              <span>GitHub Copilot</span>
+              <span>Cursor AI</span>
+              <span>Claude AI</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <h3><i class="fa-solid fa-screwdriver-wrench"></i> Web &amp; Tools</h3>
+            <div class="badge-group">
+              <span>HTML</span>
+              <span>CSS</span>
+              <span>Bootstrap</span>
+              <span>JavaScript</span>
+              <span>Postman</span>
+              <span>MySQL</span>
+              <span>Git</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section" id="projects">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Projects</p>
+          <h2>Projects</h2>
+          <p>
+            Each project reflects practical DevOps thinking: faster feedback loops,
+            cleaner deployments, and better runtime visibility.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-copy">
+              <h3>CI/CD Pipeline with GitHub Actions</h3>
+              <div class="tag-list">
+                <span>GitHub Actions</span>
+                <span>Docker</span>
+                <span>Python</span>
+                <span>Bash</span>
+                <span>YAML</span>
+                <span>Linux</span>
+              </div>
+              <p>
+                Designed a 4-stage CI/CD pipeline automating build, lint, test &amp; deploy.
+                Reduced deployment time from ~30 min to under 5 min.
+              </p>
+            </div>
+            <a class="project-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card featured reveal">
+            <div class="project-badge">
+              <i class="fa-solid fa-star"></i>
+              <span>Featured</span>
+            </div>
+            <div class="project-copy">
+              <h3>Observability Integration - CI/CD Pipeline</h3>
+              <div class="tag-list">
+                <span>Prometheus</span>
+                <span>Grafana</span>
+                <span>OpenTelemetry</span>
+                <span>structlog</span>
+                <span>Docker</span>
+                <span>Django</span>
+              </div>
+              <p>
+                Integrated Prometheus + Grafana monitoring across 3 containerized services
+                with real-time dashboards and structured logging.
+              </p>
+            </div>
+            <a class="project-link project-link-primary" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-copy">
+              <h3>Dockerized Django Application</h3>
+              <div class="tag-list">
+                <span>Docker</span>
+                <span>Docker Compose</span>
+                <span>Django</span>
+                <span>Python</span>
+                <span>MySQL</span>
+                <span>Linux</span>
+              </div>
+              <p>
+                Containerized Django + MySQL app with Docker Compose, custom networks,
+                volume mounts, and health checks.
+              </p>
+            </div>
+            <a class="project-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-copy">
+              <h3>Django Web Application</h3>
+              <div class="tag-list">
+                <span>Python</span>
+                <span>Django</span>
+                <span>SQL</span>
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>Bootstrap</span>
+                <span>Linux</span>
+              </div>
+              <p>
+                Full-stack Django app with user authentication, CRUD ops, and production
+                Linux deployment with systemd.
+              </p>
+            </div>
+            <a class="project-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-copy">
+              <h3>Amazon UI Clone - AI-Augmented Dev</h3>
+              <div class="tag-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>ChatGPT</span>
+                <span>Claude AI</span>
+                <span>Cursor AI</span>
+              </div>
+              <p>
+                Pixel-accurate Amazon homepage clone built via structured AI prompt engineering
+                - demonstrating AI-assisted development.
+              </p>
+            </div>
+            <a class="project-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-copy">
+              <h3>Personal Portfolio Website</h3>
+              <div class="tag-list">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Vercel</span>
+              </div>
+              <p>
+                Dark terminal-aesthetic portfolio deployed to Vercel with custom domain and
+                Cloudflare configuration.
+              </p>
+            </div>
+            <a class="project-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
+              <span>GitHub</span>
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section" id="education">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Education</p>
+          <h2>Education</h2>
+          <p>
+            Academic progress backed by consistency, curiosity, and strong technical fundamentals.
+          </p>
+        </div>
+
+        <div class="timeline">
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <h3>MCA - Chaitanya Deemed University, Hyderabad</h3>
+              <p>Nov 2024 - Present | CGPA: 9.5/10</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <h3>BCA - Rajeev Gandhi Govt. P.G. College, C.G.</h3>
+              <p>2021 - 2024 | 73.35%</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <h3>12th - Govt. Multipurpose HSS, C.G.</h3>
+              <p>2021 | 62%</p>
+            </div>
+          </article>
+
+          <article class="timeline-item reveal">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <div class="timeline-card">
+              <h3>10th - Carmel School, Ambikapur, C.G.</h3>
+              <p>2019 | 64.66%</p>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section" id="certifications">
+      <div class="container">
+        <div class="section-heading reveal">
+          <p class="section-kicker">Certifications</p>
+          <h2>Certifications</h2>
+          <p>
+            Industry credentials that complement practical project work and hands-on self-learning.
+          </p>
+        </div>
+
+        <div class="cert-grid">
+          <article class="cert-card reveal">
+            <div class="cert-icon"><i class="fa-solid fa-chart-pie"></i></div>
+            <h3>Data Analytics</h3>
+            <p>Deloitte</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>AI Fundamentals</h3>
+            <p>IBM</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-icon"><i class="fa-solid fa-sparkles"></i></div>
+            <h3>Generative AI Mastermind</h3>
+            <p>OutSkill</p>
+          </article>
+
+          <article class="cert-card reveal">
+            <div class="cert-icon"><i class="fa-solid fa-microchip"></i></div>
+            <h3>Generative AI</h3>
+            <p>Tata</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell section" id="contact">
+      <div class="container">
+        <div class="contact-layout">
+          <div class="contact-copy reveal">
+            <p class="section-kicker">Get In Touch</p>
+            <h2>Get In Touch</h2>
+            <p>
+              Open to Fresher DevOps roles, SRE internships, and open-source collaborations.
+              Let's connect!
+            </p>
+
+            <div class="contact-links">
+              <a href="mailto:anmolgupta0415@gmail.com">
+                <i class="fa-solid fa-envelope"></i>
+                <span>anmolgupta0415@gmail.com</span>
+              </a>
+              <a href="https://linkedin.com/in/anmol-gupta-a89132340" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-linkedin-in"></i>
+                <span>linkedin.com/in/anmol-gupta-a89132340</span>
+              </a>
+              <a href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+                <i class="fa-brands fa-github"></i>
+                <span>github.com/anmolgupta04</span>
+              </a>
+            </div>
+          </div>
+
+          <form class="contact-form reveal" id="contactForm">
+            <label>
+              <span>Name</span>
+              <input type="text" name="name" placeholder="Your name" required>
+            </label>
+
+            <label>
+              <span>Email</span>
+              <input type="email" name="email" placeholder="your@email.com" required>
+            </label>
+
+            <label>
+              <span>Message</span>
+              <textarea name="message" rows="5" placeholder="Tell me about the role or collaboration." required></textarea>
+            </label>
+
+            <button class="btn btn-primary" type="submit">
+              <i class="fa-solid fa-paper-plane"></i>
+              <span>Send</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <p>Built by Anmol Gupta &copy; 2025</p>
+      <div class="footer-links" aria-label="Social links">
+        <a href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer" aria-label="GitHub">
+          <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/anmol-gupta-a89132340" target="_blank" rel="noreferrer" aria-label="LinkedIn">
+          <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+        <a href="mailto:anmolgupta0415@gmail.com" aria-label="Email">
+          <i class="fa-solid fa-envelope"></i>
+        </a>
       </div>
     </div>
+  </footer>
 
-    <div class="main-content">
-      <!-- left sidebar (larger text) -->
-      <div class="sidebar">
-        <!-- progress skills (dynamic) -->
-        <div class="section fade-up">
-          <h2><i class="fas fa-cogs"></i> core strength</h2>
-          <div class="skill-progress">
-            <div class="progress-item"><span>Linux</span><div class="bar-bg"><div class="bar-fill" data-width="88"></div></div></div>
-            <div class="progress-item"><span>Git</span><div class="bar-bg"><div class="bar-fill" data-width="82"></div></div></div>
-            <div class="progress-item"><span>Docker</span><div class="bar-bg"><div class="bar-fill" data-width="72"></div></div></div>
-            <div class="progress-item"><span>Kubernetes</span><div class="bar-bg"><div class="bar-fill" data-width="45"></div></div></div>
-            <div class="progress-item"><span>AWS</span><div class="bar-bg"><div class="bar-fill" data-width="58"></div></div></div>
-            <div class="progress-item"><span>Python</span><div class="bar-bg"><div class="bar-fill" data-width="77"></div></div></div>
-          </div>
-        </div>
-
-        <div class="section fade-up">
-          <h2><i class="fas fa-code"></i> tech arsenal</h2>
-          <div class="skill-block">
-            <p>DevOps & cloud</p>
-            <div class="skill-tags">
-              <span>Linux</span><span>Git</span><span>CI/CD</span><span>Docker</span><span>K8s</span><span>AWS</span><span>Shell</span><span>Terraform</span>
-            </div>
-          </div>
-          <div class="skill-block">
-            <p>Languages & web</p>
-            <div class="skill-tags">
-              <span>Python</span><span>Django</span><span>SQL</span><span>HTML/CSS</span><span>JS</span><span>Bootstrap</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="section fade-up">
-          <h2><i class="fas fa-code-branch"></i> key projects</h2>
-          <div class="project-item">
-            <p><i class="fab fa-github"></i> DevOps CI/CD Pipeline</p>
-            <div class="github-link"><a href="https://github.com/anmolgupta04/ci-cd-lab"><i class="fab fa-github"></i> anmolgupta04/ci-cd-lab</a></div>
-          </div>
-          <div class="project-item">
-            <p><i class="fab fa-docker"></i> Dockerized Django App</p>
-            <div class="github-link"><a href="https://github.com/anmolgupta04/django-docker"><i class="fab fa-github"></i> anmolgupta04/django-docker</a></div>
-          </div>
-          <div class="project-item">
-            <p><i class="fas fa-globe"></i> Django SQL webapp</p>
-            <div class="github-link"><a href="https://github.com/anmolgupta04/django-sqlapp"><i class="fab fa-github"></i> anmolgupta04/django-sqlapp</a></div>
-          </div>
-        </div>
-
-        <div class="section fade-up">
-          <h2><i class="fas fa-graduation-cap"></i> education</h2>
-          <div class="edu-item"><span class="degree">MCA (9.5/10)</span> <span class="school">Chaitanya Univ, Hyd</span></div>
-          <div class="edu-item"><span class="degree">BCA 73.35%</span> <span class="school">Rajeev Gandhi College</span></div>
-          <div class="edu-item"><span class="degree">12th / 10th</span> <span class="school">62% / 64.66%</span></div>
-        </div>
-
-        <div class="section fade-up">
-          <h2><i class="fas fa-certificate"></i> certifications</h2>
-          <div class="cert-badge"><i class="fas fa-chart-line"></i> Data Analytics</div>
-          <div class="cert-badge"><i class="fas fa-robot"></i> AI Fundamentals</div>
-          <div class="cert-badge"><i class="fas fa-brain"></i> GenAI Mastermind</div>
-        </div>
-      </div>
-
-      <!-- right panel larger & polished -->
-      <div class="right-panel">
-        <div class="summary fade-up">
-          <h3><i class="fas fa-bullseye" style="color: var(--accent-primary);"></i> Professional Summary</h3>
-          <p>Detail-oriented MCA student with strong foundations in Linux, Git, Python, and web technologies, aspiring to build a career as a DevOps Engineer. Passionate about automation, CI/CD pipelines, cloud infrastructure, and containerization. Actively building hands-on DevOps skills through projects and continuous learning.</p>
-        </div>
-
-        <div class="project-grid">
-          <h3 class="fade-up" style="font-size: 1.8rem; margin-bottom: 1.5rem; border-left: 7px solid var(--accent-primary); padding-left: 1.3rem;">✨ live builds</h3>
-          <div class="cards">
-            <div class="repo-card fade-up">
-              <div class="repo-title"><i class="fab fa-github-alt"></i> <strong>CI/CD Pipeline · automation</strong></div>
-              <div class="repo-desc">Automated build & deploy using Git, GitHub Actions. Simulated end-to-end.</div>
-              <div class="repo-link"><a href="https://github.com/anmolgupta04/ci-cd-pipeline"><i class="fab fa-github"></i> anmolgupta04/ci-cd-pipeline</a></div>
-            </div>
-            <div class="repo-card fade-up">
-              <div class="repo-title"><i class="fab fa-docker"></i> <strong>Dockerized Django App</strong></div>
-              <div class="repo-desc">Multi‑stage Docker, compose, volumes, full lifecycle container management.</div>
-              <div class="repo-link"><a href="https://github.com/anmolgupta04/docker-django"><i class="fab fa-github"></i> anmolgupta04/docker-django</a></div>
-            </div>
-            <div class="repo-card fade-up">
-              <div class="repo-title"><i class="fas fa-database"></i> <strong>Django SQL webapp</strong></div>
-              <div class="repo-desc">Responsive Bootstrap + SQL backend, ORM, full‑stack pattern.</div>
-              <div class="repo-link"><a href="https://github.com/anmolgupta04/django-sqlapp"><i class="fab fa-github"></i> anmolgupta04/django-sqlapp</a></div>
-            </div>
-          </div>
-        </div>
-
-        <hr>
-        <div class="fade-up" style="font-size: 1.15rem;">
-          <i class="fas fa-terminal" style="color: var(--accent-primary);"></i> currently deep diving: Terraform, AWS advanced, Kubernetes.
-        </div>
-        <div style="margin-top: 2rem; display: flex; gap: 30px; font-size: 1.1rem;">
-          <span><i class="fab fa-github"></i> <a href="https://github.com/anmolgupta04" style="color: var(--accent-primary);">github/anmolgupta04</a></span>
-          <span><i class="fas fa-heart" style="color:#f43f5e;"></i> automation & infrastructure</span>
-        </div>
-      </div>
-    </div>
-    <div style="background: var(--sidebar-bg); padding: 1.2rem; text-align: center; border-top: 2px solid var(--border-subtle); font-size: 1rem;">
-      <i class="fas fa-copyright"></i> 2026 · Anmol Gupta — dynamic DevOps portfolio (enhanced)
-    </div>
-  </div>
   <script src="script.js"></script>
 </body>
 </html>
