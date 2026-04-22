@@ -1,25 +1,18 @@
 const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
-const navbar = document.getElementById("navbar");
-const navLinks = navMenu.querySelectorAll("a");
-const typewriterEl = document.getElementById("typewriter");
-const contactForm = document.getElementById("contactForm");
+const siteHeader = document.getElementById("siteHeader");
+const navLinks = Array.from(navMenu.querySelectorAll("a"));
+const revealItems = document.querySelectorAll("[data-reveal]");
+const sections = Array.from(document.querySelectorAll("main section[id]"));
+const currentYear = document.getElementById("currentYear");
 
-const typewriterPhrases = [
-  "DevOps Engineer",
-  "MCA Student @ Chaitanya University",
-  "CI/CD Enthusiast",
-  "Docker & Linux Geek"
-];
+function setHeaderState() {
+  siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+}
 
-let phraseIndex = 0;
-let charIndex = 0;
-let isDeleting = false;
-let typeDelay = 110;
-
-function toggleMenu(forceOpen) {
-  const shouldOpen = typeof forceOpen === "boolean"
-    ? forceOpen
+function toggleMenu(forceState) {
+  const shouldOpen = typeof forceState === "boolean"
+    ? forceState
     : !navMenu.classList.contains("is-open");
 
   navMenu.classList.toggle("is-open", shouldOpen);
@@ -27,196 +20,57 @@ function toggleMenu(forceOpen) {
   document.body.classList.toggle("nav-open", shouldOpen);
 }
 
-function setNavbarState() {
-  navbar.classList.toggle("is-scrolled", window.scrollY > 18);
-}
-
-function runTypewriter() {
-  const currentPhrase = typewriterPhrases[phraseIndex];
-
-  if (isDeleting) {
-    charIndex -= 1;
-  } else {
-    charIndex += 1;
-  }
-
-  typewriterEl.textContent = currentPhrase.slice(0, charIndex);
-
-  if (!isDeleting && charIndex === currentPhrase.length) {
-    typeDelay = 1700;
-    isDeleting = true;
-  } else if (isDeleting && charIndex === 0) {
-    isDeleting = false;
-    phraseIndex = (phraseIndex + 1) % typewriterPhrases.length;
-    typeDelay = 280;
-  } else {
-    typeDelay = isDeleting ? 45 : 95;
-  }
-
-  window.setTimeout(runTypewriter, typeDelay);
-}
-
 function initReveal() {
-  const revealItems = document.querySelectorAll(".reveal");
-
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     revealItems.forEach((item) => item.classList.add("is-visible"));
     return;
   }
 
-  const observer = new IntersectionObserver(
-    (entries, revealObserver) => {
+  const revealObserver = new IntersectionObserver(
+    (entries, observer) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
           return;
         }
 
         entry.target.classList.add("is-visible");
-        revealObserver.unobserve(entry.target);
+        observer.unobserve(entry.target);
       });
     },
     {
-      threshold: 0.16,
-      rootMargin: "0px 0px -30px 0px"
+      threshold: 0.14,
+      rootMargin: "0px 0px -40px 0px"
     }
   );
 
-  revealItems.forEach((item) => observer.observe(item));
+  revealItems.forEach((item) => revealObserver.observe(item));
 }
 
-function initHeroCanvas() {
-  const canvas = document.getElementById("heroCanvas");
-  const context = canvas.getContext("2d");
-  const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-  if (!context || prefersReducedMotion) {
-    return;
-  }
-
-  let width = 0;
-  let height = 0;
-  let dpr = Math.min(window.devicePixelRatio || 1, 2);
-  let particles = [];
-  let streams = [];
-  let animationFrameId = null;
-
-  function random(min, max) {
-    return Math.random() * (max - min) + min;
-  }
-
-  function createParticle() {
-    return {
-      x: random(0, width),
-      y: random(0, height),
-      radius: random(1, 2.4),
-      speedY: random(0.15, 0.55),
-      alpha: random(0.12, 0.42)
-    };
-  }
-
-  function createStream() {
-    return {
-      x: random(0, width),
-      y: random(-height, height),
-      length: random(70, 180),
-      speedY: random(0.8, 1.8),
-      alpha: random(0.05, 0.14)
-    };
-  }
-
-  function resizeCanvas() {
-    const hero = canvas.parentElement;
-    const rect = hero.getBoundingClientRect();
-
-    width = rect.width;
-    height = rect.height;
-    dpr = Math.min(window.devicePixelRatio || 1, 2);
-
-    canvas.width = Math.floor(width * dpr);
-    canvas.height = Math.floor(height * dpr);
-    canvas.style.width = `${width}px`;
-    canvas.style.height = `${height}px`;
-
-    context.setTransform(dpr, 0, 0, dpr, 0, 0);
-
-    const particleCount = Math.max(28, Math.floor(width / 34));
-    const streamCount = Math.max(14, Math.floor(width / 90));
-
-    particles = Array.from({ length: particleCount }, createParticle);
-    streams = Array.from({ length: streamCount }, createStream);
-  }
-
-  function drawBackgroundGlow() {
-    const gradient = context.createRadialGradient(
-      width * 0.22,
-      height * 0.18,
-      0,
-      width * 0.22,
-      height * 0.18,
-      width * 0.48
-    );
-
-    gradient.addColorStop(0, "rgba(31, 92, 153, 0.16)");
-    gradient.addColorStop(1, "rgba(31, 92, 153, 0)");
-
-    context.fillStyle = gradient;
-    context.fillRect(0, 0, width, height);
-  }
-
-  function draw() {
-    context.clearRect(0, 0, width, height);
-    drawBackgroundGlow();
-
-    streams.forEach((stream) => {
-      stream.y += stream.speedY;
-
-      if (stream.y - stream.length > height) {
-        Object.assign(stream, createStream(), { y: -stream.length });
-      }
-
-      const streamGradient = context.createLinearGradient(
-        stream.x,
-        stream.y - stream.length,
-        stream.x,
-        stream.y
-      );
-
-      streamGradient.addColorStop(0, "rgba(0, 255, 171, 0)");
-      streamGradient.addColorStop(1, `rgba(0, 255, 171, ${stream.alpha})`);
-
-      context.strokeStyle = streamGradient;
-      context.lineWidth = 1;
-      context.beginPath();
-      context.moveTo(stream.x, stream.y - stream.length);
-      context.lineTo(stream.x, stream.y);
-      context.stroke();
-    });
-
-    particles.forEach((particle) => {
-      particle.y += particle.speedY;
-
-      if (particle.y - particle.radius > height) {
-        particle.y = -particle.radius;
-        particle.x = random(0, width);
-      }
-
-      context.beginPath();
-      context.fillStyle = `rgba(229, 237, 245, ${particle.alpha})`;
-      context.arc(particle.x, particle.y, particle.radius, 0, Math.PI * 2);
-      context.fill();
-    });
-
-    animationFrameId = window.requestAnimationFrame(draw);
-  }
-
-  resizeCanvas();
-  draw();
-
-  window.addEventListener("resize", () => {
-    window.cancelAnimationFrame(animationFrameId);
-    resizeCanvas();
-    draw();
+function setActiveLink(id) {
+  navLinks.forEach((link) => {
+    const isMatch = link.getAttribute("href") === `#${id}`;
+    link.classList.toggle("is-active", isMatch);
   });
+}
+
+function initSectionTracking() {
+  const visibleSections = new IntersectionObserver(
+    (entries) => {
+      const activeEntry = entries
+        .filter((entry) => entry.isIntersecting)
+        .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+      if (activeEntry) {
+        setActiveLink(activeEntry.target.id);
+      }
+    },
+    {
+      rootMargin: "-35% 0px -45% 0px",
+      threshold: [0.2, 0.4, 0.6]
+    }
+  );
+
+  sections.forEach((section) => visibleSections.observe(section));
 }
 
 navToggle.addEventListener("click", () => {
@@ -225,26 +79,22 @@ navToggle.addEventListener("click", () => {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    if (window.innerWidth < 960) {
+    if (window.innerWidth < 980) {
       toggleMenu(false);
     }
   });
 });
 
-window.addEventListener("scroll", setNavbarState, { passive: true });
 window.addEventListener("resize", () => {
-  if (window.innerWidth >= 960) {
+  if (window.innerWidth >= 980) {
     toggleMenu(false);
   }
 });
 
-contactForm.addEventListener("submit", (event) => {
-  event.preventDefault();
-  window.alert("Thank you for reaching out! Your message has been noted.");
-  contactForm.reset();
-});
+window.addEventListener("scroll", setHeaderState, { passive: true });
 
-setNavbarState();
-runTypewriter();
+currentYear.textContent = new Date().getFullYear();
+setHeaderState();
 initReveal();
-initHeroCanvas();
+initSectionTracking();
+setActiveLink("about");
