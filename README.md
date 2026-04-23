@@ -1,12 +1,19 @@
-# Anmol Gupta — DevOps Portfolio
+# Anmol Gupta - DevOps Portfolio
 
-Single-page personal portfolio built with **HTML + CSS + vanilla JavaScript** (no frameworks).  
-Theme: **dark terminal / hacker aesthetic**.
+Single-page professional portfolio built with **HTML + CSS + vanilla JavaScript** using separate `index.html`, `style.css`, and `script.js` files.
+
+## Design
+
+- Stripe / Linear / Vercel-inspired SaaS aesthetic
+- Deep navy background with electric blue accents
+- Sticky navbar, smooth scroll, and IntersectionObserver fade-in animations
+- Fully responsive and mobile-first
 
 ## Run
 
-- Open `index.html` in a browser, or deploy the repo to GitHub Pages / Vercel.
+- Open `index.html` in a browser
+- Or deploy the repo to GitHub Pages / Vercel as a static site
 
 ## Resume
 
-- Place your resume at `resume.pdf` in the repo root so the **Download Resume** button works.
+- The **Download Resume** button points to `AnmolGupta_April23.pdf` in the repo root

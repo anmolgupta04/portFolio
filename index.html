@@ -6,7 +6,7 @@
   <title>Anmol Gupta | DevOps Engineer Portfolio</title>
   <meta
     name="description"
-    content="Portfolio of Anmol Gupta, a DevOps Engineer fresher and MCA student focused on automation, observability, and continuous delivery."
+    content="Professional portfolio of Anmol Gupta, a DevOps Engineer fresher and MCA student focused on automation, observability, and continuous delivery."
   >
   <meta name="theme-color" content="#0F172A">
   <meta property="og:title" content="Anmol Gupta | DevOps Engineer Portfolio">
@@ -18,7 +18,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
     rel="stylesheet"
   >
   <link rel="stylesheet" href="style.css">
@@ -55,6 +55,8 @@
         <a href="#projects">Projects</a>
         <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
+        <a href="#strengths">Strengths</a>
+        <a href="#additional-info">Additional Info</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -62,8 +64,8 @@
 
   <main id="home">
     <section class="hero">
-      <div class="hero-mesh" aria-hidden="true"></div>
       <div class="hero-grid" aria-hidden="true"></div>
+      <div class="hero-gradient" aria-hidden="true"></div>
 
       <div class="container hero-layout">
         <div>
@@ -80,71 +82,75 @@
 
           <div class="hero-actions" data-reveal style="--delay: 260ms;">
             <a class="btn btn-primary" href="#projects">
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
               <span>View Projects</span>
             </a>
-            <a
-              class="btn btn-secondary"
-              href="./resume%20(2).pdf"
-              download="Anmol_Gupta_Resume.pdf"
-              target="_blank"
-              rel="noreferrer"
-            >
-              <svg class="btn-icon" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-                <path d="M12 4v10m0 0 4-4m-4 4-4-4M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+            <a class="btn btn-secondary" href="./AnmolGupta_Resume_2Page.pdf" download="Anmol_Gupta_CV.pdf">
+              <svg viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                <path d="M12 4v10m0 0 4-4m-4 4-4-4M5 18h14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
               </svg>
               <span>Download Resume</span>
             </a>
           </div>
 
-          <div class="hero-meta" data-reveal style="--delay: 320ms;">
-            <div class="hero-stats">
-              <article class="hero-stat">
-                <strong>9.5/10</strong>
-                <span>MCA CGPA</span>
-              </article>
-              <article class="hero-stat">
-                <strong>CI/CD</strong>
-                <span>Automation focused</span>
-              </article>
-              <article class="hero-stat">
-                <strong>Obs.</strong>
-                <span>Monitoring mindset</span>
-              </article>
-            </div>
+          <div class="hero-strip" data-reveal style="--delay: 320ms;">
+            <article class="hero-stat">
+              <strong>9.5/10</strong>
+              <span>MCA CGPA</span>
+            </article>
+            <article class="hero-stat">
+              <strong>4-stage</strong>
+              <span>CI/CD pipelines</span>
+            </article>
+            <article class="hero-stat">
+              <strong>Observability</strong>
+              <span>Metrics, logs, traces</span>
+            </article>
           </div>
         </div>
 
-        <aside class="hero-card" data-reveal style="--delay: 180ms;" aria-label="Professional summary">
-          <div class="hero-card-top">
+        <aside class="surface hero-panel" data-reveal style="--delay: 180ms;" aria-label="Professional snapshot">
+          <div class="hero-panel-head">
             <div class="status-pill">
               <span aria-hidden="true"></span>
-              Open to opportunities
+              Open to Fresher Roles
             </div>
-            <div class="status-pill">DevOps / Platform</div>
+            <div class="status-pill">DevOps / SRE / Platform</div>
           </div>
 
-          <div class="hero-card-body">
-            <h2>Professional focus</h2>
+          <div class="hero-panel-body">
+            <h2>Automation-first, reliability-minded engineering.</h2>
             <p>
-              Early-career DevOps engineer with hands-on project experience across CI/CD pipelines,
-              Dockerized applications, cloud fundamentals, and observability tooling.
+              MCA student with hands-on experience across Dockerized applications, CI/CD pipelines,
+              Linux deployment workflows, and full-stack observability with Prometheus, Grafana,
+              OpenTelemetry, and Jaeger.
             </p>
 
-            <div class="insight-grid">
-              <article class="insight-card">
-                <strong>4-stage pipeline</strong>
-                <span>Reduced deploy flow from 30 minutes to 5 minutes.</span>
+            <div class="hero-focus-list">
+              <div class="hero-focus-item">
+                <strong>Deployment acceleration</strong>
+                <span>Reduced manual work by roughly 80% and shortened deploy cycles from 30 minutes to 5 minutes.</span>
+              </div>
+              <div class="hero-focus-item">
+                <strong>Production-style delivery</strong>
+                <span>Worked with Docker Compose, health checks, service isolation, Linux hosting, and systemd lifecycle management.</span>
+              </div>
+              <div class="hero-focus-item">
+                <strong>Observability built in</strong>
+                <span>Instrumented multi-service systems with dashboards, metrics, tracing, and structured logging.</span>
+              </div>
+            </div>
+
+            <div class="hero-panel-metrics">
+              <article>
+                <strong>Python + Bash</strong>
+                <span>Automation tooling</span>
               </article>
-              <article class="insight-card">
-                <strong>Container-first projects</strong>
-                <span>Built with Docker Compose, health checks, and production-style configs.</span>
-              </article>
-              <article class="insight-card">
-                <strong>Visibility by design</strong>
-                <span>Worked with Prometheus, Grafana, OpenTelemetry, and Jaeger traces.</span>
+              <article>
+                <strong>AWS Basics</strong>
+                <span>Infra foundation</span>
               </article>
             </div>
           </div>
@@ -152,71 +158,96 @@
       </div>
     </section>
 
-    <section class="section-shell" id="about">
+    <section class="section-shell" id="about" data-reveal>
       <div class="container">
-        <div class="section-heading" data-reveal>
+        <div class="section-heading">
           <p class="section-kicker">About</p>
-          <h2>Engineering discipline with a strong academic foundation.</h2>
+          <h2>Building a strong DevOps foundation through real projects and disciplined learning.</h2>
           <p>
-            I am an MCA student at Chaitanya Deemed University, Hyderabad, currently maintaining a
-            9.5/10 CGPA. As a DevOps-focused fresher, I enjoy building dependable delivery workflows,
-            improving deployment consistency, and adding observability that helps teams move with confidence.
+            Results-driven MCA student at Chaitanya Deemed University, Hyderabad with a 9.5/10 CGPA,
+            focused on creating reliable deployment pipelines, automation workflows, and observability
+            systems for modern applications.
           </p>
         </div>
 
         <div class="about-grid">
           <article class="surface about-card" data-reveal style="--delay: 80ms;">
-            <p>
-              My core interests are CI/CD, containerization, Linux-based deployment workflows, and
-              observability. I like practical systems work: automating repetitive steps, improving
-              release speed, and making runtime behavior easier to understand through metrics, logs,
-              and tracing.
-            </p>
-            <div class="about-highlight">
-              Passionate about CI/CD, containerization, and observability
+            <div class="about-copy">
+              <p>
+                Hands-on with Docker, CI/CD pipelines, Linux sysadmin, and full-stack observability
+                using Prometheus, Grafana, OpenTelemetry, Jaeger, and structured logging. Proficient
+                in Python scripting, Bash automation, and Git-based workflows for repeatable delivery.
+              </p>
+              <p>
+                Actively preparing for TCS NQT 2026 and seeking Fresher DevOps Engineer, SRE, or
+                Platform Engineering roles where I can contribute to deployment reliability,
+                infrastructure automation, and operational excellence from day one.
+              </p>
+              <div class="about-highlight">
+                <span aria-hidden="true"></span>
+                Seeking Fresher DevOps Engineer and Platform Engineering roles
+              </div>
             </div>
           </article>
 
-          <div class="mini-grid">
-            <article class="surface mini-card" data-reveal style="--delay: 140ms;">
-              <h3>Quick profile</h3>
-              <p>DevOps Engineer fresher based in Hyderabad, India, actively building job-ready platform and deployment skills.</p>
-            </article>
-
-            <article class="surface mini-card" data-reveal style="--delay: 200ms;">
-              <h3>Contact</h3>
-              <div class="link-stack">
-                <a class="contact-link" href="mailto:anmolgupta0415@gmail.com" target="_blank" rel="noreferrer">
+          <div class="about-side">
+            <article class="surface about-side-card" data-reveal style="--delay: 140ms;">
+              <p class="section-kicker" style="color:#3b82f6;">Contact</p>
+              <div class="about-links">
+                <a class="contact-link" href="mailto:anmolgupta0415@gmail.com">
                   <span class="link-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none">
-                      <path d="M4 7.5 12 13l8-5.5M5.2 6h13.6A1.2 1.2 0 0 1 20 7.2v9.6a1.2 1.2 0 0 1-1.2 1.2H5.2A1.2 1.2 0 0 1 4 16.8V7.2A1.2 1.2 0 0 1 5.2 6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M4 7.5 12 13l8-5.5M5.2 6h13.6A1.2 1.2 0 0 1 20 7.2v9.6a1.2 1.2 0 0 1-1.2 1.2H5.2A1.2 1.2 0 0 1 4 16.8V7.2A1.2 1.2 0 0 1 5.2 6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </span>
                   <span>anmolgupta0415@gmail.com</span>
                 </a>
-                <a class="contact-link" href="tel:+919770401857" target="_blank" rel="noreferrer">
+                <a class="contact-link" href="tel:+919770401857">
                   <span class="link-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none">
-                      <path d="M7.8 4h2.4l1.2 4-1.6 1.6a14.3 14.3 0 0 0 4.6 4.6L16 12.6l4 1.2v2.4a1.8 1.8 0 0 1-2 1.8C10.4 17.4 6.6 13.6 6 6A1.8 1.8 0 0 1 7.8 4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7.8 4h2.4l1.2 4-1.6 1.6a14.3 14.3 0 0 0 4.6 4.6L16 12.6l4 1.2v2.4a1.8 1.8 0 0 1-2 1.8C10.4 17.4 6.6 13.6 6 6A1.8 1.8 0 0 1 7.8 4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </span>
                   <span>9770401857</span>
                 </a>
-                <a class="contact-link" href="https://linkedin.com/in/anmol-gupta-a89132340" target="_blank" rel="noreferrer">
+              </div>
+            </article>
+
+            <article class="surface about-side-card" data-reveal style="--delay: 200ms;">
+              <p class="section-kicker" style="color:#3b82f6;">Profiles</p>
+              <div class="social-links">
+                <a class="social-link" href="https://linkedin.com/in/anmol-gupta-a89132340" target="_blank" rel="noopener noreferrer">
                   <span class="link-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none">
-                      <path d="M7 9.5V18M7 6.5v.01M12 18v-4.8a2.7 2.7 0 0 1 5.4 0V18M12 10h5.4V18M4.8 4h14.4A.8.8 0 0 1 20 4.8v14.4a.8.8 0 0 1-.8.8H4.8a.8.8 0 0 1-.8-.8V4.8a.8.8 0 0 1 .8-.8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M7 9.5V18M7 6.5v.01M12 18v-4.8a2.7 2.7 0 0 1 5.4 0V18M12 10h5.4V18M4.8 4h14.4A.8.8 0 0 1 20 4.8v14.4a.8.8 0 0 1-.8.8H4.8a.8.8 0 0 1-.8-.8V4.8a.8.8 0 0 1 .8-.8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </span>
-                  <span>LinkedIn</span>
+                  <span>
+                    <strong>LinkedIn</strong>
+                    <span>linkedin.com/in/anmol-gupta-a89132340</span>
+                  </span>
                 </a>
-                <a class="contact-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+                <a class="social-link" href="https://github.com/anmolgupta04" target="_blank" rel="noopener noreferrer">
                   <span class="link-icon" aria-hidden="true">
                     <svg viewBox="0 0 24 24" fill="none">
-                      <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                      <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                     </svg>
                   </span>
-                  <span>GitHub</span>
+                  <span>
+                    <strong>GitHub</strong>
+                    <span>github.com/anmolgupta04</span>
+                  </span>
+                </a>
+                <a class="social-link" href="https://port-folio-73ka.vercel.app" target="_blank" rel="noopener noreferrer">
+                  <span class="link-icon" aria-hidden="true">
+                    <svg viewBox="0 0 24 24" fill="none">
+                      <path d="M14 5h5v5M10 14 19 5M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                    </svg>
+                  </span>
+                  <span>
+                    <strong>Portfolio</strong>
+                    <span>port-folio-73ka.vercel.app</span>
+                  </span>
                 </a>
               </div>
             </article>
@@ -225,114 +256,62 @@
       </div>
     </section>
 
-    <section class="section-shell" id="skills">
+    <section class="section-shell" id="skills" data-reveal>
       <div class="container">
-        <div class="section-heading" data-reveal>
+        <div class="section-heading">
           <p class="section-kicker">Technical Skills</p>
-          <h2>Practical tools for modern delivery pipelines.</h2>
+          <h2>Tooling across delivery pipelines, infrastructure, and operational visibility.</h2>
           <p>
-            A foundation built around automation, containerized deployments, cloud basics, and
-            observability for reliable software systems.
+            A practical stack centered on containerization, automation, cloud fundamentals, Linux
+            operations, and full-stack observability for dependable software delivery.
           </p>
         </div>
 
-        <div class="skills-grid">
-          <article class="surface skill-card" data-reveal style="--delay: 40ms;">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M4 8.5 12 4l8 4.5-8 4.5L4 8.5ZM4 15.5l8 4.5 8-4.5M4 12l8 4.5 8-4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <div>
-                <h3>Containers &amp; Orchestration</h3>
-                <p>Portable environments and service composition.</p>
-              </div>
-            </div>
+        <div class="skills-board">
+          <article class="skill-row" data-reveal style="--delay: 40ms;">
+            <div class="skill-label">Container &amp; Orchestration</div>
             <div class="badge-group">
               <span class="badge">Docker</span>
               <span class="badge">Docker Compose</span>
               <span class="badge">Kubernetes (Basics)</span>
+              <span class="badge">Helm (Basics)</span>
             </div>
           </article>
 
-          <article class="surface skill-card" data-reveal style="--delay: 90ms;">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M12 3v4M12 17v4M4.9 6.9l2.8 2.8M16.3 14.3l2.8 2.8M3 12h4M17 12h4M4.9 17.1l2.8-2.8M16.3 9.7l2.8-2.8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                  <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="1.7"/>
-                </svg>
-              </span>
-              <div>
-                <h3>CI/CD &amp; Automation</h3>
-                <p>Fast, repeatable, and scriptable release workflows.</p>
-              </div>
-            </div>
+          <article class="skill-row" data-reveal style="--delay: 80ms;">
+            <div class="skill-label">CI/CD &amp; Automation</div>
             <div class="badge-group">
               <span class="badge">GitHub Actions</span>
-              <span class="badge">Jenkins</span>
+              <span class="badge">Jenkins (Basics)</span>
               <span class="badge">Shell Scripting</span>
               <span class="badge">Bash</span>
               <span class="badge">YAML Pipelines</span>
             </div>
           </article>
 
-          <article class="surface skill-card" data-reveal style="--delay: 140ms;">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M6 18h11a3 3 0 1 0-.62-5.94A5 5 0 0 0 6.5 9.5 3.5 3.5 0 0 0 6 18Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <div>
-                <h3>Cloud &amp; IaC</h3>
-                <p>Core infrastructure concepts across AWS and automation tooling.</p>
-              </div>
-            </div>
+          <article class="skill-row" data-reveal style="--delay: 120ms;">
+            <div class="skill-label">Cloud &amp; IaC</div>
             <div class="badge-group">
-              <span class="badge">AWS EC2</span>
-              <span class="badge">AWS S3</span>
-              <span class="badge">IAM</span>
-              <span class="badge">VPC</span>
-              <span class="badge">CloudWatch</span>
+              <span class="badge">AWS (EC2, S3, IAM, VPC, CloudWatch)</span>
               <span class="badge">Terraform (Basics)</span>
               <span class="badge">Ansible (Basics)</span>
             </div>
           </article>
 
-          <article class="surface skill-card" data-reveal style="--delay: 190ms;">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M4 16.5 9 11l3 3 8-8M20 12v5.5A1.5 1.5 0 0 1 18.5 19h-13A1.5 1.5 0 0 1 4 17.5v-11A1.5 1.5 0 0 1 5.5 5H11" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <div>
-                <h3>Observability</h3>
-                <p>Metrics, dashboards, tracing, and system visibility.</p>
-              </div>
-            </div>
+          <article class="skill-row" data-reveal style="--delay: 160ms;">
+            <div class="skill-label">Observability</div>
             <div class="badge-group">
               <span class="badge">Prometheus</span>
               <span class="badge">Grafana</span>
               <span class="badge">OpenTelemetry</span>
               <span class="badge">Jaeger</span>
+              <span class="badge">structlog</span>
+              <span class="badge">NGINX</span>
             </div>
           </article>
 
-          <article class="surface skill-card" data-reveal style="--delay: 240ms;">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M4 6.5h16M7 4v5M17 4v5M6 10.5h12v7A1.5 1.5 0 0 1 16.5 19h-9A1.5 1.5 0 0 1 6 17.5v-7Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <div>
-                <h3>OS &amp; Version Control</h3>
-                <p>Reliable daily tooling for development and deployment.</p>
-              </div>
-            </div>
+          <article class="skill-row" data-reveal style="--delay: 200ms;">
+            <div class="skill-label">OS &amp; Version Control</div>
             <div class="badge-group">
               <span class="badge">Linux (Ubuntu/CentOS)</span>
               <span class="badge">Git</span>
@@ -340,18 +319,8 @@
             </div>
           </article>
 
-          <article class="surface skill-card" data-reveal style="--delay: 290ms;">
-            <div class="skill-head">
-              <span class="skill-icon" aria-hidden="true">
-                <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M8 8.5 5 12l3 3.5M16 8.5 19 12l-3 3.5M13.5 5 10.5 19" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              </span>
-              <div>
-                <h3>Programming</h3>
-                <p>Application and backend fundamentals that support DevOps work.</p>
-              </div>
-            </div>
+          <article class="skill-row" data-reveal style="--delay: 240ms;">
+            <div class="skill-label">Programming</div>
             <div class="badge-group">
               <span class="badge">Python</span>
               <span class="badge">Bash</span>
@@ -361,343 +330,588 @@
               <span class="badge">SQL</span>
             </div>
           </article>
+
+          <article class="skill-row" data-reveal style="--delay: 280ms;">
+            <div class="skill-label">Web &amp; Tools</div>
+            <div class="badge-group">
+              <span class="badge">HTML</span>
+              <span class="badge">CSS</span>
+              <span class="badge">Bootstrap</span>
+              <span class="badge">JavaScript (Basic)</span>
+              <span class="badge">Postman</span>
+              <span class="badge">MySQL</span>
+              <span class="badge">VS Code</span>
+            </div>
+          </article>
+
+          <article class="skill-row" data-reveal style="--delay: 320ms;">
+            <div class="skill-label">AI Developer Tools</div>
+            <div class="badge-group">
+              <span class="badge">ChatGPT</span>
+              <span class="badge">GitHub Copilot</span>
+              <span class="badge">Cursor AI</span>
+              <span class="badge">Claude AI</span>
+              <span class="badge">Perplexity AI</span>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section-shell" id="projects">
+    <section class="section-shell" id="projects" data-reveal>
       <div class="container">
-        <div class="section-heading" data-reveal>
+        <div class="section-heading">
           <p class="section-kicker">Projects</p>
-          <h2>Selected work with an infrastructure-first mindset.</h2>
+          <h2>Selected builds that connect application delivery with operational reliability.</h2>
           <p>
-            Projects focused on automation, deployment reliability, and operational visibility.
+            Project work focused on practical DevOps execution: containerization, CI/CD, Linux
+            deployment, cloud hosting, and visibility through metrics and tracing.
           </p>
         </div>
 
         <div class="projects-grid">
-          <article class="surface project-card" data-reveal style="--delay: 50ms;">
-            <div class="project-header">
-              <div class="project-title-group">
-                <span class="project-chip">Featured Project</span>
-                <h3>DevOps Platform</h3>
-                <p>CI/CD, containerization, and observability for a modern application workflow.</p>
-              </div>
+          <article class="surface project-card" data-reveal style="--delay: 40ms;">
+            <div class="project-meta">
+              <span class="project-chip">DevOps Platform</span>
+              <span class="project-year">2024-2025</span>
             </div>
-
-            <div class="badge-group">
-              <span class="badge">Docker</span>
-              <span class="badge">GitHub Actions</span>
-              <span class="badge">Prometheus</span>
-              <span class="badge">Grafana</span>
-              <span class="badge">OpenTelemetry</span>
-              <span class="badge">Django</span>
-              <span class="badge">MySQL</span>
-            </div>
-
+            <h3>CI/CD, Containerization &amp; Observability</h3>
+            <p class="project-stack">
+              Docker, GitHub Actions, Prometheus, Grafana, OpenTelemetry, Jaeger, Django, MySQL, structlog
+            </p>
             <ul class="project-list">
-              <li>Built a 4-stage CI/CD pipeline that cut manual deployment effort by 80%.</li>
-              <li>Reduced deployment time from 30 minutes to 5 minutes with automated build, test, and release flow.</li>
-              <li>Containerized services with Docker Compose and health checks for better local and deployment consistency.</li>
-              <li>Added Prometheus, Grafana, OpenTelemetry, and Jaeger for dashboards and distributed tracing.</li>
+              <li>Built a 4-stage CI/CD pipeline with build, lint, test, and deploy stages that cut manual work by about 80% and reduced deployments from 30 minutes to 5 minutes.</li>
+              <li>Implemented Docker Compose with custom networks, volume mounts, health checks, and image layer optimization for consistent multi-service execution.</li>
+              <li>Configured Prometheus and Grafana dashboards across three services and added OpenTelemetry with Jaeger for end-to-end distributed tracing.</li>
             </ul>
-
             <div class="project-links">
-              <a class="project-link" href="https://github.com/anmolgupta04/cicd-pipeline" target="_blank" rel="noreferrer">
+              <a class="project-link" href="https://github.com/anmolgupta04/cicd-pipeline" target="_blank" rel="noopener noreferrer">
                 <span class="link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </span>
-                <span>View on GitHub</span>
+                <span>CI/CD Repo</span>
+              </a>
+              <a class="project-link" href="https://github.com/anmolgupta04/observability-pipeline" target="_blank" rel="noopener noreferrer">
+                <span class="link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span>Observability Repo</span>
               </a>
             </div>
           </article>
 
-          <article class="surface project-card" data-reveal style="--delay: 110ms;">
-            <div class="project-header">
-              <div class="project-title-group">
-                <span class="project-chip">Application Project</span>
-                <h3>Django Web Application</h3>
-                <p>Production-style Django setup with authentication, CRUD flows, and Linux deployment.</p>
-              </div>
+          <article class="surface project-card" data-reveal style="--delay: 80ms;">
+            <div class="project-meta">
+              <span class="project-chip">Django Deployment</span>
+              <span class="project-year">2024</span>
             </div>
-
-            <div class="badge-group">
-              <span class="badge">Django</span>
-              <span class="badge">Python</span>
-              <span class="badge">Linux</span>
-              <span class="badge">systemd</span>
-              <span class="badge">WhiteNoise</span>
-              <span class="badge">MySQL</span>
-            </div>
-
+            <h3>Django Web Application - Linux Deployment</h3>
+            <p class="project-stack">
+              Django, Python, Linux, systemd, WhiteNoise, MySQL
+            </p>
             <ul class="project-list">
-              <li>Implemented user authentication and CRUD operations with Django ORM and templating.</li>
-              <li>Prepared production-oriented configuration for Linux deployment and static asset delivery.</li>
-              <li>Used systemd service management to run the application reliably in a server environment.</li>
+              <li>Developed a responsive Django application with authentication, CRUD flows, ORM-backed templating, and production deployment on Linux.</li>
+              <li>Configured WhiteNoise for static file handling, automated database migrations, and environment-aware deployment steps.</li>
+              <li>Managed the full application lifecycle with systemd service units for startup, restart, and background execution reliability.</li>
             </ul>
-
             <div class="project-links">
-              <a class="project-link" href="https://github.com/anmolgupta04/django-webapp" target="_blank" rel="noreferrer">
+              <a class="project-link" href="https://github.com/anmolgupta04/django-webapp" target="_blank" rel="noopener noreferrer">
                 <span class="link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </span>
-                <span>View on GitHub</span>
+                <span>GitHub Repo</span>
               </a>
             </div>
           </article>
 
-          <article class="surface project-card" data-reveal style="--delay: 170ms;">
-            <div class="project-header">
-              <div class="project-title-group">
-                <span class="project-chip">Personal Brand</span>
-                <h3>Personal Portfolio Website</h3>
-                <p>End-to-end static site deployment with hosting, domain setup, and DNS configuration.</p>
-              </div>
+          <article class="surface project-card" data-reveal style="--delay: 120ms;">
+            <div class="project-meta">
+              <span class="project-chip">Cloud Deployment</span>
+              <span class="project-year">2024</span>
             </div>
-
-            <div class="badge-group">
-              <span class="badge">HTML</span>
-              <span class="badge">CSS</span>
-              <span class="badge">JavaScript</span>
-              <span class="badge">Vercel</span>
-              <span class="badge">Cloudflare</span>
-              <span class="badge">DNS</span>
-            </div>
-
+            <h3>Personal Portfolio Website - Cloud Deployment</h3>
+            <p class="project-stack">
+              HTML, CSS, JavaScript, Vercel, Cloudflare, DNS
+            </p>
             <ul class="project-list">
-              <li>Designed and deployed a personal portfolio website on Vercel.</li>
-              <li>Configured custom domain routing and Cloudflare DNS setup for public availability.</li>
-              <li>Handled the full deployment path from local development to live hosting.</li>
+              <li>Deployed a static portfolio to Vercel with a custom domain and DNS configuration tuned for fast global delivery.</li>
+              <li>Resolved Cloudflare script injection conflicts and handled the complete hosting chain from local development to production CDN setup.</li>
+              <li>Owned the full workflow across deployment, domain setup, custom DNS, and post-deployment validation.</li>
             </ul>
-
             <div class="project-links">
-              <a class="project-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">
+              <a class="project-link" href="https://github.com/anmolgupta04" target="_blank" rel="noopener noreferrer">
                 <span class="link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </span>
                 <span>GitHub</span>
               </a>
-              <a class="project-link" href="https://port-folio-73ka.vercel.app" target="_blank" rel="noreferrer">
+              <a class="project-link" href="https://port-folio-73ka.vercel.app" target="_blank" rel="noopener noreferrer">
                 <span class="link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M14 5h5v5M10 14 19 5M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M14 5h5v5M10 14 19 5M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </span>
                 <span>Live Site</span>
               </a>
             </div>
           </article>
+
+          <article class="surface project-card" data-reveal style="--delay: 160ms;">
+            <div class="project-meta">
+              <span class="project-chip">AI-Augmented Frontend</span>
+              <span class="project-year">2024</span>
+            </div>
+            <h3>Amazon UI Clone - AI-Augmented Frontend</h3>
+            <p class="project-stack">
+              HTML, CSS, JavaScript, ChatGPT, Claude AI, Prompt Engineering
+            </p>
+            <ul class="project-list">
+              <li>Built a pixel-accurate Amazon homepage clone through structured prompt engineering and iterative UI refinement.</li>
+              <li>Decomposed the interface into atomic components, enabling targeted prompts and tighter control over output quality.</li>
+              <li>Applied a repeatable AI-assisted workflow that also translates well to scripting, automation, and infrastructure authoring tasks.</li>
+            </ul>
+            <div class="project-links">
+              <a class="project-link" href="https://github.com/anmolgupta04/amazon-clone" target="_blank" rel="noopener noreferrer">
+                <span class="link-icon" aria-hidden="true">
+                  <svg viewBox="0 0 24 24" fill="none">
+                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                  </svg>
+                </span>
+                <span>GitHub Repo</span>
+              </a>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section-shell" id="education">
+    <section class="section-shell" id="education" data-reveal>
       <div class="container">
-        <div class="section-heading" data-reveal>
+        <div class="section-heading">
           <p class="section-kicker">Education</p>
-          <h2>Academic journey and milestones.</h2>
+          <h2>Academic milestones that support a disciplined engineering path.</h2>
           <p>
-            Consistent academic progress alongside hands-on technical learning and portfolio building.
+            Formal coursework paired with hands-on system-building, deployment practice, and
+            self-driven exploration of modern DevOps tooling.
           </p>
         </div>
 
-        <div class="education-wrap">
-          <article class="edu-item" data-reveal style="--delay: 40ms;">
-            <div class="surface edu-card">
+        <div class="timeline">
+          <article class="timeline-item" data-reveal style="--delay: 40ms;">
+            <div class="surface timeline-card">
               <h3>MCA - Chaitanya Deemed University, Hyderabad</h3>
-              <div class="edu-meta">
-                <span>Nov 2024 - Present</span>
+              <div class="timeline-meta">
+                <span>Nov 2024-Present</span>
                 <span>CGPA: 9.5/10</span>
               </div>
             </div>
           </article>
 
-          <article class="edu-item" data-reveal style="--delay: 90ms;">
-            <div class="surface edu-card">
+          <article class="timeline-item" data-reveal style="--delay: 80ms;">
+            <div class="surface timeline-card">
               <h3>BCA - Rajeev Gandhi Govt. P.G. College, Chhattisgarh</h3>
-              <div class="edu-meta">
-                <span>2021 - 2024</span>
+              <div class="timeline-meta">
+                <span>2021-2024</span>
                 <span>73.35%</span>
               </div>
             </div>
           </article>
 
-          <article class="edu-item" data-reveal style="--delay: 140ms;">
-            <div class="surface edu-card">
-              <h3>10th - Carmel School Ambikapur, Chhattisgarh</h3>
-              <div class="edu-meta">
-                <span>2018 - 2019</span>
-                <span>71%</span>
-              </div>
-            </div>
-          </article>
-
-          <article class="edu-item" data-reveal style="--delay: 190ms;">
-            <div class="surface edu-card">
-              <h3>12th - Govt. Multipurpose Higher Secondary School</h3>
-              <div class="edu-meta">
-                <span>2020 - 2021</span>
+          <article class="timeline-item" data-reveal style="--delay: 120ms;">
+            <div class="surface timeline-card">
+              <h3>Class 12 - Govt. Multipurpose Higher Secondary School, Chhattisgarh</h3>
+              <div class="timeline-meta">
+                <span>2020-2021</span>
                 <span>64%</span>
               </div>
             </div>
           </article>
+
+          <article class="timeline-item" data-reveal style="--delay: 160ms;">
+            <div class="surface timeline-card">
+              <h3>Class 10 - Carmel School, Ambikapur, Chhattisgarh</h3>
+              <div class="timeline-meta">
+                <span>2018-2019</span>
+                <span>71%</span>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section-shell" id="certifications">
+    <section class="section-shell" id="certifications" data-reveal>
       <div class="container">
-        <div class="section-heading" data-reveal>
+        <div class="section-heading">
           <p class="section-kicker">Certifications</p>
-          <h2>Credentials that complement hands-on learning.</h2>
+          <h2>Supplementary credentials across analytics and AI fundamentals.</h2>
           <p>
-            Short-form certifications across analytics and AI fundamentals that support broader technical curiosity.
+            Short-form certifications that complement hands-on project work and show continued
+            investment in modern tooling, data literacy, and AI-assisted workflows.
           </p>
         </div>
 
         <div class="cert-grid">
-          <article class="surface cert-card" data-reveal style="--delay: 50ms;">
+          <a
+            class="surface cert-card cert-link-card"
+            href="https://github.com/anmolgupta04/certificate/blob/main/AWS_completion_certificate.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-reveal
+            style="--delay: 40ms;"
+            aria-label="View AWS Solutions Architecture Job Simulation certificate"
+          >
+            <span class="cert-external" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M14 5h5v5M10 14 19 5M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
             <div class="cert-head">
               <span class="cert-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M5 19V9M10 19V5M15 19v-8M20 19v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M4 17.5 12 6l8 11.5M7.4 12.6h9.2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </span>
               <div>
+                <p class="cert-issuer">AWS</p>
+                <h3>Solutions Architecture Job Simulation</h3>
+              </div>
+            </div>
+            <span class="cert-note">View Certificate</span>
+          </a>
+
+          <a
+            class="surface cert-card cert-link-card"
+            href="https://github.com/anmolgupta04/certificate/blob/main/Deloitte.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-reveal
+            style="--delay: 80ms;"
+            aria-label="View Deloitte Data Analytics certificate"
+          >
+            <span class="cert-external" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M14 5h5v5M10 14 19 5M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
+            <div class="cert-head">
+              <span class="cert-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M5 19V9M10 19V5M15 19v-8M20 19v-4" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <div>
+                <p class="cert-issuer">Deloitte</p>
                 <h3>Data Analytics</h3>
-                <p>Deloitte</p>
               </div>
             </div>
-            <span class="cert-note">Industry credential</span>
-          </article>
+            <span class="cert-note">View Certificate</span>
+          </a>
 
-          <article class="surface cert-card" data-reveal style="--delay: 100ms;">
+          <a
+            class="surface cert-card cert-link-card"
+            href="https://github.com/anmolgupta04/certificate/blob/main/IBMDesign20251202-32-1a296s.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-reveal
+            style="--delay: 120ms;"
+            aria-label="View IBM Artificial Intelligence Fundamentals certificate"
+          >
+            <span class="cert-external" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M14 5h5v5M10 14 19 5M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
             <div class="cert-head">
               <span class="cert-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
-                  <path d="M12 4a5 5 0 0 1 5 5c0 1.92-.93 3.63-2.36 4.72-.38.3-.64.74-.64 1.22V16H9v-1.06c0-.48-.26-.92-.64-1.22A4.98 4.98 0 0 1 7 9a5 5 0 0 1 5-5ZM9.5 20h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="M12 4a5 5 0 0 1 5 5c0 1.92-.93 3.63-2.36 4.72-.38.3-.64.74-.64 1.22V16H9v-1.06c0-.48-.26-.92-.64-1.22A4.98 4.98 0 0 1 7 9a5 5 0 0 1 5-5ZM9.5 20h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </span>
               <div>
-                <h3>AI Fundamentals</h3>
-                <p>IBM</p>
+                <p class="cert-issuer">IBM</p>
+                <h3>Artificial Intelligence Fundamentals</h3>
               </div>
             </div>
-            <span class="cert-note">Foundational learning</span>
-          </article>
+            <span class="cert-note">View Certificate</span>
+          </a>
 
-          <article class="surface cert-card" data-reveal style="--delay: 150ms;">
+          <a
+            class="surface cert-card cert-link-card"
+            href="https://github.com/anmolgupta04/certificate/blob/main/out%20skill.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-reveal
+            style="--delay: 160ms;"
+            aria-label="View OutSkill Generative AI Mastermind certificate"
+          >
+            <span class="cert-external" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M14 5h5v5M10 14 19 5M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
             <div class="cert-head">
               <span class="cert-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
-                  <path d="m12 3 1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3ZM18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9L18 15ZM6 14l.9 2.1L9 17l-2.1.9L6 20l-.9-2.1L3 17l2.1-.9L6 14Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <path d="m12 3 1.8 4.2L18 9l-4.2 1.8L12 15l-1.8-4.2L6 9l4.2-1.8L12 3ZM18 15l.9 2.1L21 18l-2.1.9L18 21l-.9-2.1L15 18l2.1-.9L18 15ZM6 14l.9 2.1L9 17l-2.1.9L6 20l-.9-2.1L3 17l2.1-.9L6 14Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </span>
               <div>
+                <p class="cert-issuer">OutSkill</p>
                 <h3>Generative AI Mastermind</h3>
-                <p>OutSkill</p>
               </div>
             </div>
-            <span class="cert-note">Applied exploration</span>
-          </article>
+            <span class="cert-note">View Certificate</span>
+          </a>
 
-          <article class="surface cert-card" data-reveal style="--delay: 200ms;">
+          <a
+            class="surface cert-card cert-link-card"
+            href="https://github.com/anmolgupta04/certificate/blob/main/TATA_completion_certificate.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-reveal
+            style="--delay: 200ms;"
+            aria-label="View Tata Generative AI certificate"
+          >
+            <span class="cert-external" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none">
+                <path d="M14 5h5v5M10 14 19 5M19 13v5a1 1 0 0 1-1 1H6a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+              </svg>
+            </span>
             <div class="cert-head">
               <span class="cert-icon" aria-hidden="true">
                 <svg viewBox="0 0 24 24" fill="none">
-                  <rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.7"/>
-                  <path d="M9 9h6v6H9zM3 9h2M3 15h2M19 9h2M19 15h2M9 3v2M15 3v2M9 19v2M15 19v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                  <rect x="5" y="5" width="14" height="14" rx="2" stroke="currentColor" stroke-width="1.7"></rect>
+                  <path d="M9 9h6v6H9zM3 9h2M3 15h2M19 9h2M19 15h2M9 3v2M15 3v2M9 19v2M15 19v2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                 </svg>
               </span>
               <div>
+                <p class="cert-issuer">Tata</p>
                 <h3>Generative AI</h3>
-                <p>Tata</p>
               </div>
             </div>
-            <span class="cert-note">Technology overview</span>
+            <span class="cert-note">View Certificate</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="strengths" data-reveal>
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Key Strengths</p>
+          <h2>Core habits that shape how I work, learn, and troubleshoot.</h2>
+          <p>
+            A practical engineering mindset grounded in systematic problem-solving, careful
+            configuration work, continuous learning, and ownership across the full delivery flow.
+          </p>
+        </div>
+
+        <div class="strength-grid">
+          <article class="surface strength-card" data-reveal style="--delay: 40ms;">
+            <div class="strength-head">
+              <span class="strength-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M9.5 9.5 7 12l2.5 2.5M14.5 9.5 17 12l-2.5 2.5M13 7l-2 10" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <div>
+                <h3>Problem Solving</h3>
+                <p>Isolates issues methodically across code, containers, services, and delivery pipelines.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface strength-card" data-reveal style="--delay: 80ms;">
+            <div class="strength-head">
+              <span class="strength-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M12 4a5 5 0 0 1 5 5c0 1.92-.93 3.63-2.36 4.72-.38.3-.64.74-.64 1.22V16H9v-1.06c0-.48-.26-.92-.64-1.22A4.98 4.98 0 0 1 7 9a5 5 0 0 1 5-5ZM9.5 20h5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <div>
+                <h3>Continuous Learning</h3>
+                <p>Proactively explores DevOps tools through hands-on builds, experimentation, and self-study.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface strength-card" data-reveal style="--delay: 120ms;">
+            <div class="strength-head">
+              <span class="strength-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M8 11.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM16 13.5a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM4.5 18a3.5 3.5 0 0 1 7 0M12.5 18a3.5 3.5 0 0 1 7 0" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <div>
+                <h3>Collaboration</h3>
+                <p>Comfortable with Git-based async workflows, code reviews, and concise technical documentation.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface strength-card" data-reveal style="--delay: 160ms;">
+            <div class="strength-head">
+              <span class="strength-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M7 4h10M9 4v4m6-4v4M6 10h12l-1 9H7l-1-9Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <div>
+                <h3>Attention to Detail</h3>
+                <p>Careful with YAML authoring, configuration correctness, deployment steps, and service behavior.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface strength-card" data-reveal style="--delay: 200ms;">
+            <div class="strength-head">
+              <span class="strength-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="M4 12h6l2-7 4 14 2-7h2" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <div>
+                <h3>Adaptability</h3>
+                <p>Ramped up Prometheus, Grafana, and OpenTelemetry through focused self-learning and practice.</p>
+              </div>
+            </div>
+          </article>
+
+          <article class="surface strength-card" data-reveal style="--delay: 240ms;">
+            <div class="strength-head">
+              <span class="strength-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none">
+                  <path d="m12 4 2.2 4.8L19 10l-3.5 3.4.8 5L12 16l-4.3 2.4.8-5L5 10l4.8-1.2L12 4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
+                </svg>
+              </span>
+              <div>
+                <h3>Initiative</h3>
+                <p>Independently built end-to-end DevOps projects without formal mentorship or structured training.</p>
+              </div>
+            </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section-shell" id="contact">
+    <section class="section-shell" id="additional-info" data-reveal>
+      <div class="container">
+        <div class="section-heading">
+          <p class="section-kicker">Additional Info</p>
+          <h2>Daily lab practice, interview prep, and a workflow built for continuous improvement.</h2>
+          <p>
+            Alongside portfolio projects, I stay sharp through hands-on infrastructure practice,
+            structured DSA preparation, and AI-augmented workflows that speed up experimentation and learning.
+          </p>
+        </div>
+
+        <div class="info-grid">
+          <article class="surface info-card" data-reveal style="--delay: 40ms;">
+            <h3>Active Lab Practice</h3>
+            <p>Daily hands-on with Linux CLI, Docker, GitHub Actions, and AWS to reinforce practical DevOps workflows.</p>
+          </article>
+
+          <article class="surface info-card" data-reveal style="--delay: 80ms;">
+            <h3>Competitive Exam Prep</h3>
+            <p>TCS NQT 2026 preparation with DSA practice on LeetCode across arrays, dynamic programming, graphs, and trees.</p>
+          </article>
+
+          <article class="surface info-card" data-reveal style="--delay: 120ms;">
+            <h3>Open Source &amp; Career</h3>
+            <p>Open to DevOps Engineer, SRE, and Platform Engineering roles with strong interest in reliability, automation, and cloud operations.</p>
+          </article>
+
+          <article class="surface info-card" data-reveal style="--delay: 160ms;">
+            <h3>AI-Augmented Workflow</h3>
+            <p>Uses GitHub Copilot, Cursor AI, Claude AI, and Perplexity AI daily for research, iteration, and faster problem solving.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-shell" id="contact" data-reveal>
       <div class="container">
         <div class="contact-layout">
-          <article class="surface contact-card" data-reveal>
-            <p class="section-kicker">Contact</p>
-            <h2>Let's connect about DevOps opportunities.</h2>
+          <article class="surface contact-panel" data-reveal style="--delay: 40ms;">
+            <p class="section-kicker" style="color:#3b82f6;">Contact</p>
+            <h2>Open to fresher DevOps, SRE, and platform engineering opportunities.</h2>
             <p>
-              I'm open to fresher DevOps roles, internships, and early-career platform engineering opportunities.
+              If you're hiring for an entry-level DevOps or infrastructure-focused role, I'd be glad
+              to connect and discuss how I can contribute across automation, cloud operations,
+              deployment workflows, and observability.
             </p>
 
             <div class="contact-grid">
-              <div class="contact-row">
+              <div class="contact-block">
                 <span class="link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M4 7.5 12 13l8-5.5M5.2 6h13.6A1.2 1.2 0 0 1 20 7.2v9.6a1.2 1.2 0 0 1-1.2 1.2H5.2A1.2 1.2 0 0 1 4 16.8V7.2A1.2 1.2 0 0 1 5.2 6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M4 7.5 12 13l8-5.5M5.2 6h13.6A1.2 1.2 0 0 1 20 7.2v9.6a1.2 1.2 0 0 1-1.2 1.2H5.2A1.2 1.2 0 0 1 4 16.8V7.2A1.2 1.2 0 0 1 5.2 6Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </span>
-                <div class="contact-link-group">
-                  <strong>Email</strong><br>
-                  <a class="contact-link" href="mailto:anmolgupta0415@gmail.com" target="_blank" rel="noreferrer">anmolgupta0415@gmail.com</a>
+                <div>
+                  <strong>Email</strong>
+                  <a class="contact-link" href="mailto:anmolgupta0415@gmail.com">anmolgupta0415@gmail.com</a>
                 </div>
               </div>
 
-              <div class="contact-row">
+              <div class="contact-block">
                 <span class="link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M7.8 4h2.4l1.2 4-1.6 1.6a14.3 14.3 0 0 0 4.6 4.6L16 12.6l4 1.2v2.4a1.8 1.8 0 0 1-2 1.8C10.4 17.4 6.6 13.6 6 6A1.8 1.8 0 0 1 7.8 4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7.8 4h2.4l1.2 4-1.6 1.6a14.3 14.3 0 0 0 4.6 4.6L16 12.6l4 1.2v2.4a1.8 1.8 0 0 1-2 1.8C10.4 17.4 6.6 13.6 6 6A1.8 1.8 0 0 1 7.8 4Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </span>
-                <div class="contact-link-group">
-                  <strong>Phone</strong><br>
-                  <a class="contact-link" href="tel:+919770401857" target="_blank" rel="noreferrer">+91 9770401857</a>
+                <div>
+                  <strong>Phone</strong>
+                  <a class="contact-link" href="tel:+919770401857">+91 9770401857</a>
                 </div>
               </div>
 
-              <div class="contact-row">
+              <div class="contact-block">
                 <span class="link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M7 9.5V18M7 6.5v.01M12 18v-4.8a2.7 2.7 0 0 1 5.4 0V18M12 10h5.4V18M4.8 4h14.4A.8.8 0 0 1 20 4.8v14.4a.8.8 0 0 1-.8.8H4.8a.8.8 0 0 1-.8-.8V4.8a.8.8 0 0 1 .8-.8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M7 9.5V18M7 6.5v.01M12 18v-4.8a2.7 2.7 0 0 1 5.4 0V18M12 10h5.4V18M4.8 4h14.4A.8.8 0 0 1 20 4.8v14.4a.8.8 0 0 1-.8.8H4.8a.8.8 0 0 1-.8-.8V4.8a.8.8 0 0 1 .8-.8Z" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </span>
-                <div class="contact-link-group">
-                  <strong>LinkedIn</strong><br>
-                  <a class="contact-link" href="https://linkedin.com/in/anmol-gupta-a89132340" target="_blank" rel="noreferrer">linkedin.com/in/anmol-gupta-a89132340</a>
+                <div>
+                  <strong>LinkedIn</strong>
+                  <a class="contact-link" href="https://linkedin.com/in/anmol-gupta-a89132340" target="_blank" rel="noopener noreferrer">linkedin.com/in/anmol-gupta-a89132340</a>
                 </div>
               </div>
 
-              <div class="contact-row">
+              <div class="contact-block">
                 <span class="link-icon" aria-hidden="true">
                   <svg viewBox="0 0 24 24" fill="none">
-                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M9 18c-4 1.2-4-2-5.5-2.4M14.5 20v-3a2.6 2.6 0 0 0-.76-2.04c2.54-.28 5.21-1.25 5.21-5.66a4.42 4.42 0 0 0-1.2-3.06 4.1 4.1 0 0 0-.07-3.02s-.98-.31-3.18 1.18a11.05 11.05 0 0 0-5.8 0C6.5 2.91 5.52 3.22 5.52 3.22a4.1 4.1 0 0 0-.07 3.02 4.42 4.42 0 0 0-1.2 3.06c0 4.4 2.67 5.38 5.2 5.66A2.6 2.6 0 0 0 8.7 17v3" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"></path>
                   </svg>
                 </span>
-                <div class="contact-link-group">
-                  <strong>GitHub</strong><br>
-                  <a class="contact-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">github.com/anmolgupta04</a>
+                <div>
+                  <strong>GitHub</strong>
+                  <a class="contact-link" href="https://github.com/anmolgupta04" target="_blank" rel="noopener noreferrer">github.com/anmolgupta04</a>
                 </div>
               </div>
             </div>
           </article>
 
-          <aside class="surface availability" data-reveal style="--delay: 120ms;">
-            <p class="section-kicker" style="color: rgba(191, 219, 254, 0.9);">Availability</p>
-            <h3>Open to DevOps opportunities</h3>
+          <aside class="surface contact-side-panel" data-reveal style="--delay: 120ms;">
+            <p class="section-kicker" style="color:rgba(191,219,254,0.9);">Availability</p>
+            <h3>Anmol Gupta · Open to Fresher DevOps Engineer, SRE &amp; Platform Engineering roles</h3>
             <p>
-              Looking for fresher roles where I can contribute to CI/CD automation, cloud operations,
-              containerized deployments, and observability practices.
+              Ready to contribute to teams working on CI/CD automation, Linux-based deployments,
+              cloud infrastructure, monitoring stacks, and platform reliability initiatives.
             </p>
-            <div class="badge-group" style="margin-top: 1.1rem;">
-              <span class="badge">DevOps Engineer</span>
-              <span class="badge">SRE Internship</span>
-              <span class="badge">Platform Engineer</span>
+            <div class="availability-tags">
+              <span>DevOps Engineer</span>
+              <span>SRE</span>
+              <span>Platform Engineering</span>
             </div>
           </aside>
         </div>
@@ -707,12 +921,12 @@
 
   <footer class="footer">
     <div class="container footer-shell">
-      <p>Anmol Gupta | Open to DevOps opportunities | <span id="currentYear"></span></p>
+      <p>Anmol Gupta · Open to Fresher DevOps Engineer, SRE &amp; Platform Engineering roles</p>
       <div class="footer-links" aria-label="Footer links">
-        <a class="footer-link" href="mailto:anmolgupta0415@gmail.com" target="_blank" rel="noreferrer">Email</a>
-        <a class="footer-link" href="tel:+919770401857" target="_blank" rel="noreferrer">Phone</a>
-        <a class="footer-link" href="https://linkedin.com/in/anmol-gupta-a89132340" target="_blank" rel="noreferrer">LinkedIn</a>
-        <a class="footer-link" href="https://github.com/anmolgupta04" target="_blank" rel="noreferrer">GitHub</a>
+        <a class="footer-link" href="mailto:anmolgupta0415@gmail.com">Email</a>
+        <a class="footer-link" href="tel:+919770401857">Phone</a>
+        <a class="footer-link" href="https://linkedin.com/in/anmol-gupta-a89132340" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a class="footer-link" href="https://github.com/anmolgupta04" target="_blank" rel="noopener noreferrer">GitHub</a>
       </div>
     </div>
   </footer>

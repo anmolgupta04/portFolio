@@ -4,7 +4,6 @@ const siteHeader = document.getElementById("siteHeader");
 const navLinks = Array.from(navMenu.querySelectorAll("a"));
 const revealItems = document.querySelectorAll("[data-reveal]");
 const sections = Array.from(document.querySelectorAll("main section[id]"));
-const currentYear = document.getElementById("currentYear");
 
 function setHeaderState() {
   siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
@@ -20,21 +19,27 @@ function toggleMenu(forceState) {
   document.body.classList.toggle("nav-open", shouldOpen);
 }
 
+function setActiveLink(id) {
+  navLinks.forEach((link) => {
+    link.classList.toggle("is-active", link.getAttribute("href") === `#${id}`);
+  });
+}
+
 function initReveal() {
   if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     revealItems.forEach((item) => item.classList.add("is-visible"));
     return;
   }
 
-  const revealObserver = new IntersectionObserver(
-    (entries, observer) => {
+  const observer = new IntersectionObserver(
+    (entries, obs) => {
       entries.forEach((entry) => {
         if (!entry.isIntersecting) {
           return;
         }
 
         entry.target.classList.add("is-visible");
-        observer.unobserve(entry.target);
+        obs.unobserve(entry.target);
       });
     },
     {
@@ -43,18 +48,11 @@ function initReveal() {
     }
   );
 
-  revealItems.forEach((item) => revealObserver.observe(item));
-}
-
-function setActiveLink(id) {
-  navLinks.forEach((link) => {
-    const isMatch = link.getAttribute("href") === `#${id}`;
-    link.classList.toggle("is-active", isMatch);
-  });
+  revealItems.forEach((item) => observer.observe(item));
 }
 
 function initSectionTracking() {
-  const visibleSections = new IntersectionObserver(
+  const sectionObserver = new IntersectionObserver(
     (entries) => {
       const activeEntry = entries
         .filter((entry) => entry.isIntersecting)
@@ -70,7 +68,7 @@ function initSectionTracking() {
     }
   );
 
-  sections.forEach((section) => visibleSections.observe(section));
+  sections.forEach((section) => sectionObserver.observe(section));
 }
 
 navToggle.addEventListener("click", () => {
@@ -93,7 +91,6 @@ window.addEventListener("resize", () => {
 
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
-currentYear.textContent = new Date().getFullYear();
 setHeaderState();
 initReveal();
 initSectionTracking();
