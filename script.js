@@ -4,6 +4,23 @@ const siteHeader = document.getElementById("siteHeader");
 const navLinks = Array.from(navMenu.querySelectorAll("a"));
 const revealItems = document.querySelectorAll("[data-reveal]");
 const sections = Array.from(document.querySelectorAll("main section[id]"));
+const themeToggle = document.getElementById("themeToggle");
+
+/* ── Theme toggle ── */
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-theme", theme);
+  localStorage.setItem("portfolio-theme", theme);
+}
+
+(function initTheme() {
+  const saved = localStorage.getItem("portfolio-theme");
+  applyTheme(saved === "light" ? "light" : "dark");
+})();
+
+themeToggle.addEventListener("click", () => {
+  const current = document.documentElement.getAttribute("data-theme");
+  applyTheme(current === "light" ? "dark" : "light");
+});
 
 function setHeaderState() {
   siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
