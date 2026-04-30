@@ -2,28 +2,23 @@ const navToggle = document.getElementById("navToggle");
 const navMenu = document.getElementById("navMenu");
 const siteHeader = document.getElementById("siteHeader");
 const navLinks = Array.from(navMenu.querySelectorAll("a"));
-const revealItems = document.querySelectorAll("[data-reveal]");
 const sections = Array.from(document.querySelectorAll("main section[id]"));
-const themeToggle = document.getElementById("themeToggle");
+const revealItems = document.querySelectorAll("[data-reveal]");
+const typewriterText = document.getElementById("typewriterText");
 
-/* ── Theme toggle ── */
-function applyTheme(theme) {
-  document.documentElement.setAttribute("data-theme", theme);
-  localStorage.setItem("portfolio-theme", theme);
-}
+const phrases = [
+  "CI/CD Automation",
+  "Cloud Infrastructure",
+  "Containerization",
+  "Observability"
+];
 
-(function initTheme() {
-  const saved = localStorage.getItem("portfolio-theme");
-  applyTheme(saved === "light" ? "light" : "dark");
-})();
-
-themeToggle.addEventListener("click", () => {
-  const current = document.documentElement.getAttribute("data-theme");
-  applyTheme(current === "light" ? "dark" : "light");
-});
+let phraseIndex = 0;
+let charIndex = 0;
+let isDeleting = false;
 
 function setHeaderState() {
-  siteHeader.classList.toggle("is-scrolled", window.scrollY > 8);
+  siteHeader.classList.toggle("is-scrolled", window.scrollY > 10);
 }
 
 function toggleMenu(forceState) {
@@ -33,7 +28,6 @@ function toggleMenu(forceState) {
 
   navMenu.classList.toggle("is-open", shouldOpen);
   navToggle.setAttribute("aria-expanded", String(shouldOpen));
-  document.body.classList.toggle("nav-open", shouldOpen);
 }
 
 function setActiveLink(id) {
@@ -60,7 +54,7 @@ function initReveal() {
       });
     },
     {
-      threshold: 0.14,
+      threshold: 0.18,
       rootMargin: "0px 0px -40px 0px"
     }
   );
@@ -69,23 +63,53 @@ function initReveal() {
 }
 
 function initSectionTracking() {
-  const sectionObserver = new IntersectionObserver(
+  const observer = new IntersectionObserver(
     (entries) => {
-      const activeEntry = entries
+      const active = entries
         .filter((entry) => entry.isIntersecting)
         .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
 
-      if (activeEntry) {
-        setActiveLink(activeEntry.target.id);
+      if (active) {
+        setActiveLink(active.target.id);
       }
     },
     {
       rootMargin: "-35% 0px -45% 0px",
-      threshold: [0.2, 0.4, 0.6]
+      threshold: [0.2, 0.45, 0.7]
     }
   );
 
-  sections.forEach((section) => sectionObserver.observe(section));
+  sections.forEach((section) => observer.observe(section));
+}
+
+function runTypewriter() {
+  const currentPhrase = phrases[phraseIndex];
+
+  if (!isDeleting) {
+    charIndex += 1;
+    typewriterText.textContent = currentPhrase.slice(0, charIndex);
+
+    if (charIndex === currentPhrase.length) {
+      isDeleting = true;
+      window.setTimeout(runTypewriter, 1200);
+      return;
+    }
+
+    window.setTimeout(runTypewriter, 85);
+    return;
+  }
+
+  charIndex -= 1;
+  typewriterText.textContent = currentPhrase.slice(0, charIndex);
+
+  if (charIndex === 0) {
+    isDeleting = false;
+    phraseIndex = (phraseIndex + 1) % phrases.length;
+    window.setTimeout(runTypewriter, 250);
+    return;
+  }
+
+  window.setTimeout(runTypewriter, 40);
 }
 
 navToggle.addEventListener("click", () => {
@@ -94,14 +118,14 @@ navToggle.addEventListener("click", () => {
 
 navLinks.forEach((link) => {
   link.addEventListener("click", () => {
-    if (window.innerWidth < 980) {
+    if (window.innerWidth < 981) {
       toggleMenu(false);
     }
   });
 });
 
 window.addEventListener("resize", () => {
-  if (window.innerWidth >= 980) {
+  if (window.innerWidth >= 981) {
     toggleMenu(false);
   }
 });
@@ -109,6 +133,7 @@ window.addEventListener("resize", () => {
 window.addEventListener("scroll", setHeaderState, { passive: true });
 
 setHeaderState();
+setActiveLink("about");
 initReveal();
 initSectionTracking();
-setActiveLink("about");
+runTypewriter();
